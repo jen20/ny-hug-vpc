@@ -6,6 +6,7 @@ resource "aws_vpc" "vpc" {
 
   tags {
     Name = "${format("%s", var.vpc_name)}"
+    AtlasTest = "this should appear in the plan"
   }
 }
 
