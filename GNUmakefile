@@ -1,4 +1,4 @@
-TERRAFORM_REMOTE_STATE_NAME="ny-hug/vpc"
+TERRAFORM_REMOTE_STATE_NAME="jen20/ny-hug-vpc"
 
 default: help
 
@@ -9,7 +9,7 @@ help:
 
 .PHONY: config
 config: ## Configure Terraform Remote State Storage
-	@echo "Configuring Terraform remote state ($(TERRAFORM_REMOTE_STATE_KEY))..."
+	@echo "Configuring Terraform remote state ($(TERRAFORM_REMOTE_STATE_NAME))..."
 	@terraform remote config \
 		-backend=atlas \
 		-backend-config="name=$(TERRAFORM_REMOTE_STATE_NAME)"
